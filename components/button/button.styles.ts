@@ -16,7 +16,7 @@ border: 3px solid ${COLORS.YELLOW};
     font-weight: 600;
 }
 
-&:HOVER {
+&:hover {
     background-color: ${COLORS.SUNSET};
 }
 `
