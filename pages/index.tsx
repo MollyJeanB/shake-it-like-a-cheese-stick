@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import { Manrope } from 'next/font/google'
 import { Button, TextDisplay } from '@/components'
+import { Page } from './page.styles'
 
-const inter = Inter({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ['latin'] })
 
 export default function Home() {
   const [ gameHasStarted, setGameHasStarted ] = useState<boolean>(false)
@@ -16,14 +16,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
+      <main className={manrope.className}>
+        <Page>
       <Button onClick={() => setGameHasStarted(!gameHasStarted)}>
         { gameHasStarted ? 'Stop the dance' : 'Begin the dance' }
       </Button>
-        <div className={styles.center}>
-          <TextDisplay isActive={gameHasStarted} />
- 
-        </div>
+        <TextDisplay isActive={gameHasStarted} />
+        </Page>
       </main>
     </>
   )

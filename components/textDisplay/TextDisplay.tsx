@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { getDanceDirection } from "@/utils/danceDirections"
+import { TextDisplayWrapper } from "./textDisplay.styles"
 
 type PropsType = {
     isActive: boolean,
@@ -25,8 +26,8 @@ export const TextDisplay: React.FC<PropsType> = ({ isActive }) => {
 
 
     return (
-        <h1 >
+        <TextDisplayWrapper>
             { danceDirection  }
-        </h1>
+        </TextDisplayWrapper>
     )
 }
