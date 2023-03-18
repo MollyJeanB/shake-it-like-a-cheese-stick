@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Head from 'next/head'
 import { Manrope } from 'next/font/google'
-import { Button, TextDisplay } from '@/components'
+import { Button, TextDisplay, Slider } from '@/components'
 import { COLORS } from '@/utils/css'
 
 export const Page = styled.div`
@@ -28,6 +28,7 @@ export default function Home() {
       <Button onClick={() => setGameHasStarted(!gameHasStarted)}>
         { gameHasStarted ? 'Stop the dance' : 'Begin the dance' }
       </Button>
+        { gameHasStarted && <Slider /> }
         <TextDisplay isActive={gameHasStarted} />
         </Page>
       </main>
