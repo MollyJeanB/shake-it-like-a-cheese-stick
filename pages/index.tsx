@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <Button onClick={() => setGameHasStarted(!gameHasStarted)}>
-        { 'Begin the dance' }
+        { gameHasStarted ? 'Stop the dance' : 'Begin the dance' }
       </Button>
         <div className={styles.center}>
           <TextDisplay isActive={gameHasStarted} />
