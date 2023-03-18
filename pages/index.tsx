@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Head from 'next/head'
 import { Manrope } from 'next/font/google'
 import { Button, TextDisplay } from '@/components'
+import { Page } from './page.styles'
 
 const manrope = Manrope({ subsets: ['latin'] })
 
@@ -16,10 +17,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={manrope.className}>
+        <Page>
       <Button onClick={() => setGameHasStarted(!gameHasStarted)}>
         { gameHasStarted ? 'Stop the dance' : 'Begin the dance' }
       </Button>
         <TextDisplay isActive={gameHasStarted} />
+        </Page>
       </main>
     </>
   )
