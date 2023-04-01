@@ -1,8 +1,15 @@
 import { useState } from 'react'
+import styled from 'styled-components'
 import Head from 'next/head'
 import { Manrope } from 'next/font/google'
 import { Button, TextDisplay } from '@/components'
-import { Page } from './page.styles'
+import { COLORS } from '@/utils/css'
+
+export const Page = styled.div`
+padding: 60px 40px;
+background-color: ${COLORS.DARK_BLUE};
+height: 100vh;
+`
 
 const manrope = Manrope({ subsets: ['latin'] })
 
