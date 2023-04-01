@@ -4,25 +4,31 @@ import { TextDisplayWrapper } from "./textDisplay.styles"
 
 type PropsType = {
     isActive: boolean,
+    speed: number,
 }
 
-export const TextDisplay: React.FC<PropsType> = ({ isActive }) => {
+export const TextDisplay: React.FC<PropsType> = ({ isActive, speed }) => {
 
     const [danceDirection, setDanceDirection] = useState<string>('')
+    const speedValue = 5000 - speed
+
     useEffect(() => {
-    if ( isActive )  {
-        setDanceDirection(getDanceDirection())
-    const interval = setInterval(() => {
-        setDanceDirection(getDanceDirection())
-    }, 3000)
+        if ( isActive )  {
+            setDanceDirection(getDanceDirection())
+        } else {
+            setDanceDirection('')
+        }
+    }, [ isActive ])
 
-    return () => clearInterval(interval)
+    useEffect(() => {
+        if (isActive) {
+            const interval = setInterval(() => { 
+            setDanceDirection(getDanceDirection())
+            }, speedValue )
+            return () => clearInterval(interval)
+        }
 
-    } else {
-        setDanceDirection('')
-    }
-
-}, [ isActive])
+}, [ isActive, speedValue])
 
 
     return (

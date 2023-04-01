@@ -15,6 +15,12 @@ const manrope = Manrope({ subsets: ['latin'] })
 
 export default function Home() {
   const [ gameHasStarted, setGameHasStarted ] = useState<boolean>(false)
+  const [ speed, setSpeed ] = useState<number>(2250)
+
+  const onChangeSpeed = (value: number) => {
+    setSpeed(value)
+  }
+
   return (
     <>
       <Head>
@@ -28,8 +34,8 @@ export default function Home() {
       <Button onClick={() => setGameHasStarted(!gameHasStarted)}>
         { gameHasStarted ? 'Stop the dance' : 'Begin the dance' }
       </Button>
-        { gameHasStarted && <Slider /> }
-        <TextDisplay isActive={gameHasStarted} />
+        { gameHasStarted && <Slider onChange={onChangeSpeed} speed={speed} /> }
+        <TextDisplay isActive={gameHasStarted} speed={speed} />
         </Page>
       </main>
     </>
