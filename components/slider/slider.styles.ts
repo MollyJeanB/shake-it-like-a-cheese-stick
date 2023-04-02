@@ -2,7 +2,7 @@ import { COLORS } from "@/utils/css"
 import styled from "styled-components"
 
 export const SliderWrapper = styled.div`
-	padding: 30px;
+	padding-bottom: 30px;
 `
 
 export const SliderInput = styled.input`
@@ -14,6 +14,7 @@ export const SliderInput = styled.input`
 	height: 35px;
 	background: ${COLORS.SUNSET};
 	border-radius: 25px;
+	transition: background 0.2s;
 
 	&:focus {
 		outline: 3px solid ${COLORS.AQUA};
@@ -27,14 +28,33 @@ export const SliderInput = styled.input`
 		border: 3px solid ${COLORS.YELLOW};
 		border-radius: 100%;
 		background: ${COLORS.AQUA};
+		transition: background 0.2s;
 	}
 
 	&::-moz-range-thumb {
 		width: 28px;
 		height: 28px;
+		cursor: pointer;
 		border: 3px solid ${COLORS.YELLOW};
 		border-radius: 100%;
 		background: ${COLORS.AQUA};
+		transition: background 0.2s;
+	}
+
+	&&& {
+		&:disabled {
+			background: ${COLORS.GRAY_3};
+
+			&::-webkit-slider-thumb {
+				border: 3px solid ${COLORS.GRAY_1};
+				background: ${COLORS.GRAY_5};
+			}
+
+			&::-moz-range-thumb {
+				border: 3px solid ${COLORS.GRAY_1};
+				background: ${COLORS.GRAY_5};
+			}
+		}
 	}
 `
 
