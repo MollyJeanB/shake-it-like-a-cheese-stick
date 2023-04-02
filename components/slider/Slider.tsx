@@ -22,7 +22,7 @@ export const Slider: React.FC<PropsType> = ({onChange, speed}) => {
                 value={speed}
             />
             <SliderLabel>
-                {'Speed'}
+                {'Dance command speed'}
             </SliderLabel>
         </SliderWrapper>
     )
