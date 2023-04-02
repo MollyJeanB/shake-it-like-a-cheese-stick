@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styled from 'styled-components'
 import Head from 'next/head'
 import { Manrope } from 'next/font/google'
-import { Button, TextDisplay } from '@/components'
+import { Button, TextDisplay, Slider } from '@/components'
 import { COLORS } from '@/utils/css'
 
 export const Page = styled.div`
@@ -15,6 +15,12 @@ const manrope = Manrope({ subsets: ['latin'] })
 
 export default function Home() {
   const [ gameHasStarted, setGameHasStarted ] = useState<boolean>(false)
+  const [ speed, setSpeed ] = useState<number>(2250)
+
+  const onChangeSpeed = (value: number) => {
+    setSpeed(value)
+  }
+
   return (
     <>
       <Head>
@@ -28,7 +34,8 @@ export default function Home() {
       <Button onClick={() => setGameHasStarted(!gameHasStarted)}>
         { gameHasStarted ? 'Stop the dance' : 'Begin the dance' }
       </Button>
-        <TextDisplay isActive={gameHasStarted} />
+        { gameHasStarted && <Slider onChange={onChangeSpeed} speed={speed} /> }
+        <TextDisplay isActive={gameHasStarted} speed={speed} />
         </Page>
       </main>
     </>

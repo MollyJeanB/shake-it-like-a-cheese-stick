@@ -19,4 +19,8 @@ border: 3px solid ${COLORS.YELLOW};
 &:hover {
     background-color: ${COLORS.SUNSET};
 }
+
+   &:focus {
+        outline: 3px solid ${COLORS.AQUA};
+     }
 `
