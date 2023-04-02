@@ -45,6 +45,10 @@ export const getDanceDirection = (): string => {
 		"Preen",
 		"Guffaw",
 		"Slide",
+		"High step",
+		"Swivel",
+		"Spin",
+		"Crumple",
 	]
 
 	const nouns = [
@@ -79,7 +83,6 @@ export const getDanceDirection = (): string => {
 		"a very impressive resume",
 		"a jar of soup",
 		"a soothing fish tank",
-		"a frustrating game",
 		"a Kardashian",
 		"a troll",
 		"a kangaroo",
@@ -89,6 +92,18 @@ export const getDanceDirection = (): string => {
 		"a ballerina",
 		"a steamboat",
 		"a crypto bro",
+		"a baby bear",
+		"a nervous chihuahua",
+		"a skunk",
+		"a glass chandelier",
+		"high tide",
+		"a pickled pepper",
+		"a trombone",
+		"a slide whistle",
+		"a wicked witch",
+		"every color of the rainbow",
+		"a furby",
+		"a polly pocket",
 	]
 
 	const punctuation = [".", "!", "", " :)", "!!"]
