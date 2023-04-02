@@ -4,9 +4,14 @@ import { SliderInput, SliderLabel, SliderWrapper } from "./slider.styles"
 type PropsType = {
 	onChange: Function
 	speed: number
+	isDisabled: boolean
 }
 
-export const Slider: React.FC<PropsType> = ({ onChange, speed }) => {
+export const Slider: React.FC<PropsType> = ({
+	onChange,
+	speed,
+	isDisabled,
+}) => {
 	const onInputChange = (value: number) => {
 		onChange(value)
 	}
@@ -20,6 +25,7 @@ export const Slider: React.FC<PropsType> = ({ onChange, speed }) => {
 				id="speed"
 				onChange={(event) => onInputChange(parseInt(event.target.value, 10))}
 				value={speed}
+				disabled={isDisabled}
 			/>
 			<SliderLabel>{"Dance command speed"}</SliderLabel>
 		</SliderWrapper>
