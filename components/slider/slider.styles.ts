@@ -19,20 +19,6 @@ export const SliderInput = styled.input`
 		outline: 3px solid ${COLORS.AQUA};
 	}
 
-	&::disabled {
-		background: ${COLORS.GRAY_3}
-
-		&::-webkit-slider-thumb {
-			border: 3px solid ${COLORS.GRAY_1};
-			background: ${COLORS.GRAY_5};
-		}
-
-		&::-moz-range-thumb {
-			border: 3px solid ${COLORS.GRAY_1};
-			background: ${COLORS.GRAY_5};
-		}
-	}
-
 	&::-webkit-slider-thumb {
 		-webkit-appearance: none;
 		cursor: pointer;
@@ -46,9 +32,26 @@ export const SliderInput = styled.input`
 	&::-moz-range-thumb {
 		width: 28px;
 		height: 28px;
+		cursor: pointer;
 		border: 3px solid ${COLORS.YELLOW};
 		border-radius: 100%;
 		background: ${COLORS.AQUA};
+	}
+
+	&&& {
+		&:disabled {
+			background: ${COLORS.GRAY_3};
+
+			&::-webkit-slider-thumb {
+				border: 3px solid ${COLORS.GRAY_1};
+				background: ${COLORS.GRAY_5};
+			}
+
+			&::-moz-range-thumb {
+				border: 3px solid ${COLORS.GRAY_1};
+				background: ${COLORS.GRAY_5};
+			}
+		}
 	}
 `
 
