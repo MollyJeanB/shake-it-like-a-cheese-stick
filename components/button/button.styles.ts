@@ -10,6 +10,8 @@ export const ButtonWrapper = styled.button`
 	font: unset;
 	color: ${COLORS.WHITE};
 	border: 3px solid ${COLORS.YELLOW};
+	transition: background 0.2s;
+	cursor: pointer;
 
 	&&& {
 		font-size: 20px;
