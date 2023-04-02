@@ -2,21 +2,7 @@ import { useState } from "react"
 import styled from "styled-components"
 import Head from "next/head"
 import { Manrope } from "next/font/google"
-import { Button, TextDisplay, Slider } from "@/components"
-import { COLORS } from "@/utils/css"
-
-export const HeaderWrapper = styled.div`
-	padding-bottom: 30px;
-`
-
-export const Header = styled.h1`
-	text-align: center;
-`
-
-export const SubHeader = styled.p`
-	text-align: center;
-	font-size: 18px;
-`
+import { Button, TextDisplay, Slider, Header } from "@/components"
 
 const manrope = Manrope({ subsets: ["latin"] })
 
@@ -40,10 +26,7 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={manrope.className}>
-				<HeaderWrapper>
-					<Header>{`🧀 ${TITLE} 🧀`}</Header>
-					<SubHeader>{SUBTITLE}</SubHeader>
-				</HeaderWrapper>
+				<Header title={`🧀 ${TITLE} 🧀`} subTitle={SUBTITLE} />
 				<Button onClick={() => setGameHasStarted(!gameHasStarted)}>
 					{gameHasStarted ? "Stop the dance" : "Begin the dance"}
 				</Button>
