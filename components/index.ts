@@ -1,3 +1,3 @@
-export { Button } from './button/Button'
-export { Slider } from './slider/Slider'
-export { TextDisplay } from './textDisplay/TextDisplay'
+export { Button } from "./button/Button"
+export { Slider } from "./slider/Slider"
+export { TextDisplay } from "./textDisplay/TextDisplay"

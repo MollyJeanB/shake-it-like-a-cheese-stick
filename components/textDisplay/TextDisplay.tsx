@@ -3,37 +3,30 @@ import { getDanceDirection } from "@/utils/danceDirections"
 import { TextDisplayWrapper } from "./textDisplay.styles"
 
 type PropsType = {
-    isActive: boolean,
-    speed: number,
+	isActive: boolean
+	speed: number
 }
 
 export const TextDisplay: React.FC<PropsType> = ({ isActive, speed }) => {
+	const [danceDirection, setDanceDirection] = useState<string>("")
+	const speedValue = 5000 - speed
 
-    const [danceDirection, setDanceDirection] = useState<string>('')
-    const speedValue = 5000 - speed
+	useEffect(() => {
+		if (isActive) {
+			setDanceDirection(getDanceDirection())
+		} else {
+			setDanceDirection("")
+		}
+	}, [isActive])
 
-    useEffect(() => {
-        if ( isActive )  {
-            setDanceDirection(getDanceDirection())
-        } else {
-            setDanceDirection('')
-        }
-    }, [ isActive ])
+	useEffect(() => {
+		if (isActive) {
+			const interval = setInterval(() => {
+				setDanceDirection(getDanceDirection())
+			}, speedValue)
+			return () => clearInterval(interval)
+		}
+	}, [isActive, speedValue])
 
-    useEffect(() => {
-        if (isActive) {
-            const interval = setInterval(() => { 
-            setDanceDirection(getDanceDirection())
-            }, speedValue )
-            return () => clearInterval(interval)
-        }
-
-}, [ isActive, speedValue])
-
-
-    return (
-        <TextDisplayWrapper>
-            { danceDirection  }
-        </TextDisplayWrapper>
-    )
+	return <TextDisplayWrapper>{danceDirection}</TextDisplayWrapper>
 }
