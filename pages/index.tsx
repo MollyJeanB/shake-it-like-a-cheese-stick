@@ -5,12 +5,6 @@ import { Manrope } from "next/font/google"
 import { Button, TextDisplay, Slider } from "@/components"
 import { COLORS } from "@/utils/css"
 
-export const Page = styled.div`
-	padding: 40px;
-	background-color: ${COLORS.DARK_BLUE};
-	height: 100vh;
-`
-
 export const HeaderWrapper = styled.div`
 	padding-bottom: 30px;
 `
@@ -46,21 +40,19 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={manrope.className}>
-				<Page>
-					<HeaderWrapper>
-						<Header>{`🧀 ${TITLE} 🧀`}</Header>
-						<SubHeader>{SUBTITLE}</SubHeader>
-					</HeaderWrapper>
-					<Button onClick={() => setGameHasStarted(!gameHasStarted)}>
-						{gameHasStarted ? "Stop the dance" : "Begin the dance"}
-					</Button>
-					<TextDisplay isActive={gameHasStarted} speed={speed} />
-					<Slider
-						onChange={onChangeSpeed}
-						speed={speed}
-						isDisabled={!gameHasStarted}
-					/>
-				</Page>
+				<HeaderWrapper>
+					<Header>{`🧀 ${TITLE} 🧀`}</Header>
+					<SubHeader>{SUBTITLE}</SubHeader>
+				</HeaderWrapper>
+				<Button onClick={() => setGameHasStarted(!gameHasStarted)}>
+					{gameHasStarted ? "Stop the dance" : "Begin the dance"}
+				</Button>
+				<TextDisplay isActive={gameHasStarted} speed={speed} />
+				<Slider
+					onChange={onChangeSpeed}
+					speed={speed}
+					isDisabled={!gameHasStarted}
+				/>
 			</main>
 		</>
 	)
