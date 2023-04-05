@@ -1,0 +1,14 @@
+.wrapper {
+	margin: 50px 20px;
+}
+
+.text {
+	margin: 0 auto;
+	min-height: 125px;
+	max-width: 1200px;
+	padding: 25px;
+	border: var(--size-xxs) dashed var(--color-yellow);
+	border-radius: 25px;
+	text-align: center;
+	font-size: 50px;
+}

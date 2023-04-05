@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { ButtonWrapper } from "./button.styles"
+import styles from "./button.module.css"
 
 type PropsType = {
 	children: ReactNode | string
@@ -7,5 +7,9 @@ type PropsType = {
 }
 
 export const Button: React.FC<PropsType> = ({ children, onClick }) => {
-	return <ButtonWrapper onClick={() => onClick()}>{children}</ButtonWrapper>
+	return (
+		<button className={styles.button} onClick={() => onClick()}>
+			{children}
+		</button>
+	)
 }

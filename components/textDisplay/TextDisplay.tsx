@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { getDanceDirection } from "@/utils/danceDirections"
-import { TextDisplayWrapper, TextDisplayHeader } from "./textDisplay.styles"
+import styles from "./textDisplay.module.css"
 
 type PropsType = {
 	isActive: boolean
@@ -29,8 +29,8 @@ export const TextDisplay: React.FC<PropsType> = ({ isActive, speed }) => {
 	}, [isActive, speedValue])
 
 	return (
-		<TextDisplayWrapper>
-			<TextDisplayHeader>{danceDirection}</TextDisplayHeader>
-		</TextDisplayWrapper>
+		<div className={styles.wrapper}>
+			<h1 className={styles.text}>{danceDirection}</h1>
+		</div>
 	)
 }

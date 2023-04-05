@@ -1,0 +1,22 @@
+.button {
+	display: block;
+	margin: 0 auto;
+	background-color: var(--color-aqua);
+	padding: 15px;
+	border-radius: var(--border-radius-rounded);
+	font: unset;
+	color: var(--color-white);
+	border: 3px solid var(--color-yellow);
+	transition: background var(--transition-duration);
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: var(--font-weight-semi-bold);
+}
+
+.button:hover {
+	background: var(--color-sunset);
+}
+
+.button:focus {
+	outline: var(--size-xxs) solid var(--color-aqua);
+}
