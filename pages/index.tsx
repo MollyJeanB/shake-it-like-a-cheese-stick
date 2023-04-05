@@ -1,5 +1,4 @@
 import { useState } from "react"
-import styled from "styled-components"
 import Head from "next/head"
 import { Manrope } from "next/font/google"
 import { Button, TextDisplay, Slider, Header } from "@/components"
