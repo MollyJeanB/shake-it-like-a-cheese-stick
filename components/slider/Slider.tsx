@@ -1,5 +1,5 @@
 import React from "react"
-import { SliderInput, SliderLabel, SliderWrapper } from "./slider.styles"
+import styles from "./slider.module.css"
 
 type PropsType = {
 	onChange: Function
@@ -17,8 +17,9 @@ export const Slider: React.FC<PropsType> = ({
 	}
 
 	return (
-		<SliderWrapper>
-			<SliderInput
+		<div className={styles.wrapper}>
+			<input
+				className={styles.input}
 				type="range"
 				min="0"
 				max="4500"
@@ -27,7 +28,7 @@ export const Slider: React.FC<PropsType> = ({
 				value={speed}
 				disabled={isDisabled}
 			/>
-			<SliderLabel>{"Dance command speed"}</SliderLabel>
-		</SliderWrapper>
+			<label className={styles.label}>{"Dance command speed"}</label>
+		</div>
 	)
 }
