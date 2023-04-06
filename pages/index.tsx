@@ -30,11 +30,7 @@ export default function Home() {
 					{gameHasStarted ? "Stop the dance" : "Begin the dance"}
 				</Button>
 				<TextDisplay isActive={gameHasStarted} speed={speed} />
-				<Slider
-					onChange={onChangeSpeed}
-					speed={speed}
-					isDisabled={!gameHasStarted}
-				/>
+				{gameHasStarted && <Slider onChange={onChangeSpeed} speed={speed} />}
 			</main>
 		</>
 	)

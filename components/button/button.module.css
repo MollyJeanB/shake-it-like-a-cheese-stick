@@ -18,5 +18,5 @@
 }
 
 .button:focus {
-	outline: var(--size-xxs) solid var(--color-aqua);
+	outline: var(--size-xxs) solid var(--color-bright-aqua);
 }

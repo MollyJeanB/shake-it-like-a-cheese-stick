@@ -15,7 +15,7 @@
 }
 
 .input:focus {
-	outline: var(--size-xxs) solid var(--color-aqua);
+	outline: var(--size-xxs) solid var(--color-bright-aqua);
 }
 
 .input::-webkit-slider-thumb {
@@ -38,20 +38,6 @@
 	border-radius: var(--border-radius-circle);
 	background: var(--color-aqua);
 	transition: background var(--transition-duration);
-}
-
-.input:disabled {
-	background: var(--color-gray-3);
-}
-
-.input:disabled::-moz-range-thumb {
-	border: var(--size-xxs) solid var(--color-gray-1);
-	background: var(--color-gray-5);
-}
-
-.input:disabled::-webkit-slider-thumb {
-	border: var(--size-xxs) solid var(--color-gray-1);
-	background: var(--color-gray-5);
 }
 
 .label {
