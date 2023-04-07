@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Head from "next/head"
 import { Manrope } from "next/font/google"
-import { Button, TextDisplay, Slider, Header } from "@/components"
+import { Button, TextDisplay, Slider, Header, GitHubLink } from "@/components"
 
 const manrope = Manrope({ subsets: ["latin"] })
 
@@ -31,6 +31,11 @@ export default function Home() {
 				</Button>
 				<TextDisplay isActive={gameHasStarted} speed={speed} />
 				{gameHasStarted && <Slider onChange={onChangeSpeed} speed={speed} />}
+				<footer>
+					<GitHubLink
+						link={"https://github.com/MollyJeanB/shake-it-like-a-cheese-stick"}
+					/>
+				</footer>
 			</main>
 		</>
 	)
