@@ -1,4 +1,5 @@
 export { Button } from "./button/Button"
+export { GitHubLink } from "./gitHubLink/GitHubLink"
 export { Header } from "./header/Header"
 export { Slider } from "./slider/Slider"
 export { TextDisplay } from "./textDisplay/TextDisplay"
