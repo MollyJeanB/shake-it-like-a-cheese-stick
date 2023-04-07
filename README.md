@@ -1,6 +1,8 @@
 # Shake it Like a Cheese Stick
 
-An interpretive dance facilitation tool built at Empathetech's inaugural community hackathon.
+An interpretive dance facilitation tool built at Empathetech's inaugural community hackathon. View it live at [shake-it-like-a-cheese-stick.com](https://www.shake-it-like-a-cheese-stick.com/).
+
+![Screenshot of Shake It Like a Cheese Stick app](./public/cheesestick.png)
 
 ## Getting Started
 
