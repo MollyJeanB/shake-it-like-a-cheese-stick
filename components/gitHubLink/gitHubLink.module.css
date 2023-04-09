@@ -3,10 +3,8 @@
 	padding: 6px 8px;
 	color: var(--color-white);
 	background: unset;
+	font: unset;
 	font-size: 16px;
 	cursor: pointer;
 	border-radius: var(--border-radius-semi-rounded);
-	position: absolute;
-	bottom: 15px;
-	right: 15px;
 }

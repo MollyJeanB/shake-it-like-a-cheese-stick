@@ -6,7 +6,19 @@ An interpretive dance facilitation tool built at Empathetech's inaugural communi
 
 ## Getting Started
 
-First, run the development server:
+Node Version Manager (NVM) is recommended to maintain node version consistency with dependencies. If you don't already have NVM set up on your computer, use [this guide](https://github.com/nvm-sh/nvm) to get started. To specify the node version in the `.nvmrc` file:
+
+```
+nvm use
+```
+
+Then install dependencies:
+
+```
+yarn install
+```
+
+Then run the development server:
 
 ```
 yarn dev
